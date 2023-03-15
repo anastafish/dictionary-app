@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Defination from './Defination'
 import player from '../img/375.png'
 
+
 function Main({font, toggle}) {
 
     const [dict, setDict] = useState(
@@ -35,7 +36,6 @@ function Main({font, toggle}) {
             }
             catch {
                 alert('There No such word!')
-
             }
 
         }
@@ -48,13 +48,13 @@ function Main({font, toggle}) {
     <div className='flex flex-col items-center w-[100%] justify-center 
     mt-[20px]  p-2'>
         <div className='flex flex-col p-7 min-w-[60%]'>
-            <input type="text" placeholder='Type a word' className={`
-            border-black border-[2px] rounded-lg p-2 font-${font}
+            <input style={{fontFamily:font}} type="text" placeholder='Type a word' className={`
+            border-black border-[2px] rounded-lg p-2 
             `} onChange={handleChange} value={word} onKeyDown={handleSearch}/>
             <div className='flex w-[100%] items-center justify-between py-7'>
                 <div className='flex flex-col items-center'>
-                    <h1 className={`${toggle ? 'text-white' : 'text-black'} font-${font} text-[50px]`}>{dict[0].word}</h1>
-                    <h1 className={`${toggle ? 'text-white' : 'text-black'} text-[40px] font-${font}`}>{dict[0].phonetic}</h1>
+                    <h1 style={{fontFamily:font}} className={`${toggle ? 'text-white' : 'text-black'} text-[50px]`}>{dict[0].word}</h1>
+                    <h1 style={{fontFamily:font}} className={`${toggle ? 'text-white' : 'text-black'} text-[40px]`}>{dict[0].phonetic}</h1>
                 </div>
                 <img onClick={startAudio} src={player} alt={'playbutton'} className="w-[100px] h-[100px] cursor-pointer"/>
 

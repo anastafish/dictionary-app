@@ -26,8 +26,8 @@ function Header({toggle, setToggle, font, setFont}) {
         <div className='flex items-center p-2 sm:gap-10 gap-2' > 
             <Select value={font} onChange={handleChange} color='info' >
                 <MenuItem value={'serif'}>serif</MenuItem>
-                <MenuItem value={'sans'}>sans</MenuItem>
-                <MenuItem value={'mono'}>mono</MenuItem>
+                <MenuItem value={'sans-serif'}>sans-serif</MenuItem>
+                <MenuItem value={'monospace'}>monospace</MenuItem>
             </Select>
             <div className='flex gap-2'>
                 <Switch
